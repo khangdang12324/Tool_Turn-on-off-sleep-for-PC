@@ -1,55 +1,51 @@
 # ☕ KeepAwake
 
-Một tiện ích nhỏ gọn trên Windows giúp ngăn máy tính và màn hình tự động tắt, hoạt động hoàn toàn ẩn dưới khay hệ thống (System Tray).
+A lightweight Windows utility that prevents your computer and screen from automatically turning off, running completely hidden in the System Tray.
 
-## 🌟 Giới thiệu
+## 🌟 Introduction
 
-Bạn cảm thấy phiền phức khi màn hình máy tính tự động tắt sau 1 phút không tương tác? KeepAwake là giải pháp "nhỏ nhưng có võ" giúp bạn giải quyết vấn đề này. 
+Annoyed by your PC screen turning off after just 1 minute of inactivity? KeepAwake is the "small but mighty" solution to this problem. 
 
-Thay vì phải mở ứng dụng Settings của Windows để chỉnh sửa thời gian tắt màn hình mỗi khi cần treo máy, KeepAwake chạy ngầm siêu nhẹ ở góc phải thanh Taskbar, cho phép bạn chủ động Bật/Tắt chế độ giữ sáng màn hình tức thời chỉ với một cú click chuột.
+Instead of opening Windows Settings to tweak the screen timeout every time you need to go AFK, KeepAwake runs super lightly in the background on your Taskbar's right corner, allowing you to instantly toggle the keep-awake mode with just a click.
 
-## 📸 Giao diện trực quan
+## 📸 Screenshot
 
-*(Nhắc nhẹ: Bạn hãy tạo thư mục `images` trên GitHub, up tấm ảnh khay hệ thống hôm nọ lên, sau đó dán link ảnh đè vào chữ `link-anh-cua-ban.png` ở dòng dưới nhé)*
-
-![Giao diện KeepAwake]
 <img width="261" height="115" alt="image" src="https://github.com/user-attachments/assets/abb180aa-40c5-47b4-8d7f-15d44d9fcdc3" />
 
+## 🚀 Key Features
 
-## 🚀 Tính năng chính
+* **Keep the screen awake:** Prevents the display from turning off and stops Windows from going into Sleep mode.
+* **Minimalist UI:** No bulky application windows; operates 100% via the System Tray icon.
+* **Code-drawn UI:** Intuitive icon that changes based on status (⚪ Gray Dot: OFF | 🟢 Green Dot: ON).
+* **Self-contained:** Runs immediately as a single `.exe` file without requiring users to pre-install the .NET Runtime.
 
-* **Giữ màn hình luôn sáng:** Ngăn màn hình tắt và ngăn Windows rơi vào trạng thái Sleep.
-* **Giao diện tối giản:** Không có cửa sổ ứng dụng cồng kềnh, hoạt động 100% qua icon trên System Tray.
-* **Tự vẽ UI bằng code:** Icon trực quan thay đổi theo trạng thái (⚪ Chấm xám: Đang Tắt | 🟢 Chấm xanh: Đang Bật).
-* **Đóng gói độc lập (Self-contained):** Chạy ngay lập tức chỉ với 1 file `.exe` duy nhất mà không yêu cầu máy người dùng phải cài sẵn .NET Runtime.
+## 📥 Download & Installation
 
-## 📥 Tải xuống & Cài đặt
+**[⬇️ CLICK HERE TO DOWNLOAD KEEPAWAKE (Latest Version)](https://github.com/khangdang12324/Tool_Turn-on-off-sleep-for-PC/releases/tag/v1)**
 
-**[⬇️ BẤM VÀO ĐÂY ĐỂ TẢI VỀ KEEPAWAKE (Bản mới nhất)](https://github.com/khangdang12324/Tool_Turn-on-off-sleep-for-PC/releases/tag/v1)**
+**Quick Setup Guide:**
+1. Click the link above to download the `KeepAwake.zip` file.
+2. Extract the downloaded folder.
+3. Run `KeepAwake.exe` directly to use it instantly (you can right-click and choose *Send to > Desktop* to create a shortcut).
 
-**Hướng dẫn sử dụng nhanh:**
-1. Nhấn vào link trên để tải file `KeepAwake.zip` về máy.
-2. Giải nén thư mục vừa tải.
-3. Chạy trực tiếp file `KeepAwake.exe` để sử dụng ngay (có thể click chuột phải chọn *Send to > Desktop* để tạo shortcut).
+## 💡 Usage
 
-## 💡 Cách sử dụng
+* After running, the app will appear as a small dot in the System Tray (bottom right corner of your screen).
+* **Double-click** the icon to toggle between the 2 states:
+    * ⚪ **Gray Icon:** KeepAwake is **OFF**. The screen will turn off according to your default Windows settings.
+    * 🟢 **Green Icon:** KeepAwake is **ON**. Your screen will be kept awake indefinitely.
+* **Right-click** the icon to open the context menu, allowing you to toggle the state or select "Exit" to completely close the app.
 
-* Sau khi chạy, ứng dụng sẽ xuất hiện dưới dạng một chấm tròn ở khay hệ thống (góc dưới cùng bên phải màn hình).
-* **Nhấp đúp chuột trái** vào icon để chuyển đổi qua lại giữa 2 trạng thái:
-    * ⚪ **Icon Xám:** Chế độ KeepAwake đang **TẮT**. Màn hình sẽ tự tắt theo cài đặt mặc định của Windows.
-    * 🟢 **Icon Xanh lá:** Chế độ KeepAwake đang **BẬT**. Màn hình của bạn sẽ được giữ sáng liên tục.
-* **Nhấp chuột phải** vào icon để mở menu ngữ cảnh, cho phép bạn thao tác Bật/Tắt hoặc chọn "Thoát" để đóng hoàn toàn ứng dụng.
+## 🛠️ Technologies Used
 
-## 🛠️ Công nghệ sử dụng
-
-* **Ngôn ngữ:** C#
-* **Nền tảng:** .NET 10 (Publish Single File & Self-contained)
-* **Giao diện:** Windows Forms (TrayApplicationContext)
-* **API Hệ thống:** Win32 API (`SetThreadExecutionState` từ `kernel32.dll`)
+* **Language:** C#
+* **Framework:** .NET 10 (Publish Single File & Self-contained)
+* **UI:** Windows Forms (TrayApplicationContext)
+* **System API:** Win32 API (`SetThreadExecutionState` from `kernel32.dll`)
 
 ---
 
-## 👨‍💻 Tác giả
+## 👨‍💻 Author
 
-Được phát triển để giải quyết sự phiền toái nhỏ trong công việc hàng ngày.
-🌐 Tham khảo thêm các dự án khác tại Portfolio cá nhân: [dangnguyenphuckhang.id.vn](https://dangnguyenphuckhang.id.vn)
+Developed to solve a minor annoyance in daily workflow.
+🌐 Check out my other projects on my personal portfolio: [dangnguyenphuckhang.id.vn](https://dangnguyenphuckhang.id.vn)
